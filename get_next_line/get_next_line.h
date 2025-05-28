@@ -6,7 +6,7 @@
 /*   By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 16:21:52 by yzhang2           #+#    #+#             */
-/*   Updated: 2025/05/29 00:32:26 by yzhang2          ###   ########.fr       */
+/*   Updated: 2025/05/29 00:38:36 by yzhang2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 32
+# endif
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
