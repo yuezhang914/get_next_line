@@ -6,7 +6,7 @@
 /*   By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 16:21:52 by yzhang2           #+#    #+#             */
-/*   Updated: 2025/05/29 00:38:36 by yzhang2          ###   ########.fr       */
+/*   Updated: 2025/05/29 15:23:05 by yzhang2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 32
+#  define BUFFER_SIZE 24
 # endif
 
 char	*get_next_line(int fd);
