@@ -6,7 +6,7 @@
 /*   By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 16:21:52 by yzhang2           #+#    #+#             */
-/*   Updated: 2025/05/29 15:23:05 by yzhang2          ###   ########.fr       */
+/*   Updated: 2025/05/29 17:03:10 by yzhang2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 #  define BUFFER_SIZE 24
 # endif
 
+char	*read_save(int fd, char *backup);
+char	*get_line(char *backup);
+char	*refresh_backup(char *backup);
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
