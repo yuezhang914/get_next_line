@@ -1,0 +1,2 @@
+This is a super long line that goes on and on and on and never has a newline until the very end. Still going... still going... finally ends here.
+Second line.
