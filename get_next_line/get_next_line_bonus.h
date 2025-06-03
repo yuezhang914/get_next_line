@@ -6,7 +6,7 @@
 /*   By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 16:22:04 by yzhang2           #+#    #+#             */
-/*   Updated: 2025/06/03 01:26:21 by yzhang2          ###   ########.fr       */
+/*   Updated: 2025/06/03 15:33:06 by yzhang2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
+# endif
+# ifndef OPEN_MAX
+#  define OPEN_MAX 1024
 # endif
 
 char	*get_next_line(int fd);

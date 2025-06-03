@@ -6,7 +6,7 @@
 /*   By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 16:22:08 by yzhang2           #+#    #+#             */
-/*   Updated: 2025/06/03 01:43:31 by yzhang2          ###   ########.fr       */
+/*   Updated: 2025/06/03 15:45:36 by yzhang2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*read_save(int fd, char *backup)
 	if (!buf)
 		return (free(backup), NULL);
 	count = 1;
-	while (!ft_strchr(backup, '\n') && count > 0)
+	while (backup && !ft_strchr(backup, '\n') && count > 0)
 	{
 		count = read(fd, buf, BUFFER_SIZE);
 		if (count < 0)
