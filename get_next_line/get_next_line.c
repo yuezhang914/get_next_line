@@ -6,21 +6,34 @@
 /*   By: yzhang2 <yzhang2@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 16:21:54 by yzhang2           #+#    #+#             */
-/*   Updated: 2025/06/02 23:40:09 by yzhang2          ###   ########.fr       */
+/*   Updated: 2025/06/03 01:04:12 by yzhang2          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+static char	*join_free(char *s1, char *s2)
+{
+	char	*joined;
+	char	*tmp;
+
+	tmp = s1;
+	joined = ft_strjoin(tmp, s2);
+	free(tmp);
+	return (joined);
+}
+
 char	*read_save(int fd, char *backup)
 {
 	ssize_t	count;
 	char	*buf;
-	char	*temp;
 
-	if (!backup && !(backup = ft_strdup("")))
+	if (!backup)
+		backup = ft_strdup("");
+	if (!backup)
 		return (NULL);
-	if (!(buf = malloc(BUFFER_SIZE + 1)))
+	buf = malloc(BUFFER_SIZE + 1);
+	if (!buf)
 		return (free(backup), NULL);
 	count = 1;
 	while (!ft_strchr(backup, '\n') && count > 0)
@@ -31,9 +44,7 @@ char	*read_save(int fd, char *backup)
 		if (count == 0)
 			break ;
 		buf[count] = '\0';
-		temp = backup;
-		backup = ft_strjoin(temp, buf);
-		free(temp);
+		backup = join_free(backup, buf);
 		if (!backup)
 			return (free(buf), NULL);
 	}
